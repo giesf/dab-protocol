@@ -11,17 +11,36 @@ In order to see posts on their timeline they need to follow at least one creator
 - As consumer I want to discover more creators than I already follow.
 - As consumer I want to be able to see posts for free.
 
-
 ## Creator
 A creator is a user that is creating posts to be viewed by consumers.
 They have a creator profile on which all their posts can be viewed.
 
-- As creator I want to create a post with my followers.
+- As creator I want to create a post to share with my followers.
 - As creator I want to share a post of another creator with my followers.
 - As creator I want to send and receive private message to communicate with other creators.
-
-
 
 ## Post
 A post is a piece of content shared by a creator, which can include text, images, videos, or links. It allows creators to express thoughts, share updates, and engage with their followers.
 All posts are shared publicly and can be viewed by any consumer.
+
+
+
+
+# Releases
+This project can quickly explode in scope so it is important to well define steps and scopes. 
+What is the minimal viable product here? What is the minimal requirement in scope?
+
+## V1 - Singular Blogs
+Two profiles, one for each of us where we can easily add posts.
+
+User Stories for this would be:
+- As creator I want to create a post to share on my profile.
+- As creator I want to have some form of security so no-one can use my name to create a post on my profile.
+- As consumer I want to see the posts of one creator on their profile in chronological order.
+
+## V2 - Timeline
+To find out if one of the creators I'm interested in as a consumer has posted something new, I don't want to go through all the profiles manually, but I want one central place where I can see all posts of creators I follow in chronological order.
+
+User Stories for this would be:
+- As consumer I want to edit a list of creators I am interested in. (View, Add, Remove)
+- As consumer I want to see all posts from the creators I'm interested in, on one page in chronological order (now -> past).
