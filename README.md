@@ -1,6 +1,9 @@
 # DAB (Dumb as Bricks) Blogging Protocol
 
-A *Server* in the context of this document is a single-user instance. There are no limits on what the Base URL of such an instance could be. A single user instance could be `bernd.dab-blog.sh` or `dab-example.blog` or `xzy.dab-blog.sh/bla/bli/blub`. It just needs to be a domain-space that the user has full control over and implements the following endpoints:
+DAB is a federated blogging protocol, designed to be as simple to implement as possible. This draft is the result of a brainstorming session on a balcony in Friedrichshain and therefore represents a very early version of the protocol.
+
+## Lingo
+A *Server* in the context of this document is a single-user instance. (It is a misleading name that should be replaced) There are no limits on what the Base URL of such an instance could be. A single user instance could be `bernd.dab-blog.sh` or `dab-example.blog` or `xzy.dab-blog.sh/bla/bli/blub`. It just needs to be a domain-space that the user has full control over and implements the following endpoints:
 
 ## API-Spec
 
