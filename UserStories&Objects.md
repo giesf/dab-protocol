@@ -71,6 +71,6 @@ To find out if one of the creators I'm interested in as a consumer has posted so
 - Feed: On page load of the feed, the app would scrape all profile domains that are in the following for the previously defined structure.
   - When the html was received it gets parsed into the articles and combined with the origin domain.
   - The articles get presented in the feed order by the "data-shared-at" in reverse alphabetical order.
-  - To each article the domain of the profile gets added as a profile name inside each article tag as a <h2>.
+  - To each article the domain of the profile gets added as a profile name inside each article tag as a `<h2>`.
 
 -> For this I have put an example html in the repository called `feed-example.html`.
