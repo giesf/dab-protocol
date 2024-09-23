@@ -44,19 +44,19 @@ Two profiles, one for each of us where we can easily add posts.
 - We need to define a criteria on how the HTML document needs to be structured, for that a basic requirement could be:
 ```
 <html>
-<body>
-<div class="content">
-<article data-shared-at="unixtimestamp">
-<!-- put your article / post content here -->
-</article>
-<article data-shared-at="unixtimestamp">
-<!-- put your article / post content here -->
-</article>
-</div>
-</body>
+  <body>
+    <div class="content">
+      <article data-shared-at="unixtimestamp">
+      <!-- put your article / post content here -->
+      </article>
+      <article data-shared-at="unixtimestamp">
+      <!-- put your article / post content here -->
+      </article>
+    </div>
+  </body>
 </html>
 ```
--> For this I have put an example html in the repository.
+-> For this I have put an example html in the repository called `profile-example.html`.
 
 ## V2 - Timeline
 To find out if one of the creators I'm interested in as a consumer has posted something new, I don't want to go through all the profiles manually, but I want one central place where I can see all posts of creators I follow in chronological order.
@@ -71,5 +71,6 @@ To find out if one of the creators I'm interested in as a consumer has posted so
 - Feed: On page load of the feed, the app would scrape all profile domains that are in the following for the previously defined structure.
   - When the html was received it gets parsed into the articles and combined with the origin domain.
   - The articles get presented in the feed order by the "data-shared-at" in reverse alphabetical order.
-  - To each article the domain of the profile gets added as a profile name
-  - I will create an example html for this as well as a sketch.
+  - To each article the domain of the profile gets added as a profile name inside each article tag as a <h2>.
+
+-> For this I have put an example html in the repository called `feed-example.html`.
