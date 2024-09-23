@@ -39,7 +39,7 @@ Two profiles, one for each of us where we can easily add posts.
 - As consumer I want to see the posts of one creator on their profile in chronological order.
 
 ### Technical Requirements
-- Each blog can at this point just be one html document, and a directory for media files.
+- Each profile can at this point just be one html document, and a directory for media files.
 - As long as only the owner has edit access to the server / files we don't need to implement any authentication ourselves.
 - We need to define a criteria on how the HTML document needs to be structured, for that a basic requirement could be:
 ```
@@ -61,6 +61,15 @@ Two profiles, one for each of us where we can easily add posts.
 ## V2 - Timeline
 To find out if one of the creators I'm interested in as a consumer has posted something new, I don't want to go through all the profiles manually, but I want one central place where I can see all posts of creators I follow in chronological order.
 
-User Stories for this would be:
+### User Stories
 - As consumer I want to edit a list of creators I am interested in. (View, Add, Remove)
 - As consumer I want to see all posts from the creators I'm interested in, on one page in chronological order (now -> past).
+
+### Technical Requirements
+- For a start we could have one central page that could work as a hub for consumers, until we figure out a good way to decentralize this.
+- Follows: On that page would be an option to edit following via profile domains. This list could be save in the users cookies.
+- Feed: On page load of the feed, the app would scrape all profile domains that are in the following for the previously defined structure.
+  - When the html was received it gets parsed into the articles and combined with the origin domain.
+  - The articles get presented in the feed order by the "data-shared-at" in reverse alphabetical order.
+  - To each article the domain of the profile gets added as a profile name
+  - I will create an example html for this as well as a sketch.
