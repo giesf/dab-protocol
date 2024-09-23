@@ -33,10 +33,30 @@ What is the minimal viable product here? What is the minimal requirement in scop
 ## V1 - Singular Blogs
 Two profiles, one for each of us where we can easily add posts.
 
-User Stories for this would be:
+### User Stories
 - As creator I want to create a post to share on my profile.
 - As creator I want to have some form of security so no-one can use my name to create a post on my profile.
 - As consumer I want to see the posts of one creator on their profile in chronological order.
+
+### Technical Requirements
+- Each blog can at this point just be one html document, and a directory for media files.
+- As long as only the owner has edit access to the server / files we don't need to implement any authentication ourselves.
+- We need to define a criteria on how the HTML document needs to be structured, for that a basic requirement could be:
+```
+<html>
+<body>
+<div class="content">
+<article data-shared-at="unixtimestamp">
+<!-- put your article / post content here -->
+</article>
+<article data-shared-at="unixtimestamp">
+<!-- put your article / post content here -->
+</article>
+</div>
+</body>
+</html>
+```
+-> For this I have put an example html in the repository.
 
 ## V2 - Timeline
 To find out if one of the creators I'm interested in as a consumer has posted something new, I don't want to go through all the profiles manually, but I want one central place where I can see all posts of creators I follow in chronological order.
