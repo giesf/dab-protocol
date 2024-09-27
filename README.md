@@ -82,6 +82,4 @@ I used the hcloud directory, but had to change a few things:
 after that running terrafrom set me up with a rancher instance super easily.
 
 Now I have my kuberenets cluster running and the next step is to figure out the ci/cd pipeline to deploy to it.
-
-
-
+First step is building an image and hosting it in a registry.
