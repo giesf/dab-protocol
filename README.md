@@ -83,3 +83,4 @@ after that running terrafrom set me up with a rancher instance super easily.
 
 Now I have my kuberenets cluster running and the next step is to figure out the ci/cd pipeline to deploy to it.
 First step is building an image and hosting it in a registry.
+I had issues building the docker image. Used the docker template from https://bun.sh/guides/ecosystem/docker.
