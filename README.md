@@ -65,3 +65,23 @@ The endpoint is intended to enable simple reactions on other websites. A website
 
 `/public-key.pem`
 Should return the servers public key used to sign private messages
+
+# Setup / Devlog
+I created myself a hetzner account
+To install kubernetes on my hetzner, I setup rancher by following this terraform code (https://github.com/rancher/quickstart)
+I used the hcloud directory, but had to change a few things:
+    In the terraform.tfvars:
+        hcloud_token = (my hetzner cloud api token)
+        instance_type = "cx22"
+        hcloud_location = "fsn1"
+    infra.tf
+        # HCloud Instance for creating a single node RKE cluster and installing the Rancher server
+        resource "hcloud_server" "rancher_server" {
+        name        = "${var.prefix}-rancher-server"
+        image       = "ubuntu-24.04"
+after that running terrafrom set me up with a rancher instance super easily.
+
+Now I have my kuberenets cluster running and the next step is to figure out the ci/cd pipeline to deploy to it.
+
+
+
