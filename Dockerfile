@@ -1,18 +1,20 @@
 # Use the official Bun image as a base
-FROM bun:latest
+FROM ghcr.io/oven-sh/bun:latest
 
 # Set the working directory
 WORKDIR /app
 
-# Copy package files and install dependencies
-COPY package.json bun.lockb ./
+# Copy package.json and package-lock.json
+COPY package*.json ./
+
+# Install dependencies
 RUN bun install
 
-# Copy the rest of your application code
+# Copy the rest of the application code
 COPY . .
 
-# Expose the port your app runs on
+# Expose the port the app runs on
 EXPOSE 3000
 
-# Command to run your application
-CMD ["bun", "start"]
+# Command to run the application
+CMD ["bun", "run", "start"]
